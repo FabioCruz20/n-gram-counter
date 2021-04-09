@@ -46,7 +46,7 @@ public class NgramCounterReducer extends
         
         // só escreve uma entrada para o n-grama se ele tiver aparecido um
         // número mínimo de vezes
-        if (total > minCount) {
+        if (total >= minCount) {
             String result = total + " " + String.join(" ", files);
             resultText.set(result);
         
